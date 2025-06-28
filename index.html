@@ -8,15 +8,19 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-        header { background: #0074D9; color: #fff; padding: 0.5rem 1rem; display: flex; align-items: center; justify-content: space-between; }
-        .logo-title { display: flex; align-items: center; }
-        .logo-title img { height: 90px; margin-right: 10px; }
-        .logo-title h1 { font-size: 95px; margin: 0; color: #fff; }
+        header {
+            background: #0074D9;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
         .menu-toggle {
-            display: none;
+            display: flex;
             flex-direction: column;
             cursor: pointer;
-            margin-left: 20px;
+            margin-right: 15px;
         }
         .menu-toggle span {
             background: #fff;
@@ -25,15 +29,32 @@
             margin: 4px 0;
             display: block;
         }
-        nav { background: #005fa3; padding: 0.5rem; text-align: center; display: flex; justify-content: center; flex-wrap: wrap; }
+        .logo-title { display: flex; align-items: center; }
+        .logo-title img { height: 90px; margin-right: 10px; }
+        .logo-title h1 { font-size: 95px; margin: 0; color: #fff; }
+        
+        nav {
+            background: #005fa3;
+            padding: 0.5rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
         .hero { background: #e0f0ff; padding: 2rem; text-align: center; }
         .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-        .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+        .product-card {
+            background: #fff;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
         .product-card h2 { margin-top: 0; }
         .product-card img { max-width: 500px; float: left; margin-right: 1rem; }
         .product-card p { font-size: 0.75rem; }
-        .product-card .features { margin: 1rem 0; }
         .btn {
             background: #FF4136;
             color: #fff;
@@ -43,7 +64,10 @@
             border-radius: 3px;
             font-size: 1.2rem;
         }
-        .bold-image-section { text-align: center; margin: 2rem 0; }
+        .bold-image-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
         .bold-image-section img {
             width: 98%;
             max-width: 1000px;
@@ -53,17 +77,23 @@
             display: block;
             margin: 20px auto;
         }
-        .highlight-text { 
-            font-family: 'Arial Black', sans-serif; 
-            font-size: 1.8rem; 
-            color: #0074D9; 
-            font-weight: bold; 
-            margin-top: 1rem; 
+        .highlight-text {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.8rem;
+            color: #0074D9;
+            font-weight: bold;
+            margin-top: 1rem;
         }
-        footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
         .disclaimer { font-size: 0.85rem; margin-top: 1rem; }
+        
         @media (max-width: 800px) {
-            .menu-toggle { display: flex; }
             nav { display: none; flex-direction: column; }
             nav.show { display: flex; }
             .logo-title h1 { font-size: 50px; }
@@ -71,27 +101,31 @@
     </style>
 </head>
 <body>
+
 <header>
-    <div class="logo-title">
-        <img src="logo.png" alt="TechSmart Logo">
-        <h1>TechSmart</h1>
-    </div>
     <div class="menu-toggle" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
+    <div class="logo-title">
+        <img src="logo.png" alt="TechSmart Logo">
+        <h1>TechSmart</h1>
+    </div>
 </header>
+
 <nav id="nav">
     <a href="#">Home</a>
     <a href="#">Top Picks</a>
     <a href="#">Categories</a>
     <a href="#">Contact</a>
 </nav>
+
 <section class="hero">
     <h1>Explore Top Tech Gadgets for 2025</h1>
     <p>Tested, Reviewed, and Recommended for You</p>
 </section>
+
 <div class="container">
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
@@ -118,18 +152,22 @@
         <a class="btn" href="https://www.amazon.com/HV-F2056-15-6-17-Laptop-Cooler-Cooling/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
 </div>
+
 <div class="bold-image-section">
     <img src="laptop-user.jpg" alt="Woman Using Laptop">
     <h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
 </div>
+
 <footer>
     <p>&copy; 2025 TechSmart. All Rights Reserved.</p>
 </footer>
+
 <script>
     function toggleMenu() {
         const nav = document.getElementById('nav');
         nav.classList.toggle('show');
     }
 </script>
+
 </body>
 </html>
