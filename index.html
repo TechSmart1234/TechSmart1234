@@ -8,7 +8,8 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-        header { background: #0074D9; color: #fff; padding: 1rem; text-align: center; }
+        header { background: #0074D9; color: #fff; display: flex; align-items: center; padding: 1rem; }
+        header img { height: 80px; margin-right: 1rem; }
         nav { background: #005fa3; padding: 0.5rem; text-align: center; }
         nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
         .hero { background: #e0f0ff; padding: 2rem; text-align: center; }
@@ -16,7 +17,6 @@
         .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
         .product-card h2 { margin-top: 0; }
         .product-card img { max-width: 500px; float: left; margin-right: 1rem; }
-        .product-card .features { margin: 1rem 0; }
         .btn { background: #FF4136; color: #fff; padding: 0.5rem 1rem; text-decoration: none; display: inline-block; border-radius: 3px; }
         .bold-image-section { text-align: center; margin: 2rem 0; }
         .bold-image-section img {
@@ -38,16 +38,20 @@
         footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
         .disclaimer { font-size: 0.85rem; margin-top: 1rem; }
         @media (max-width: 600px) {
-            .product-card img { float: none; display: block; margin: 0 auto 1rem auto; }
+            .product-card img { float: none; display: block; margin: 0 auto 1rem auto; max-width: 100%; }
+            header { flex-direction: column; text-align: center; }
+            header img { margin: 0 0 1rem 0; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="TechSmart Logo" style="height: 250px;">
-    <h1>TechSmart</h1>
-    <p>Your Guide to the Best Tech on Amazon</p>
+    <img src="logo.png" alt="TechSmart Logo">
+    <div>
+        <h1 style="margin: 0;">TechSmart</h1>
+        <p style="margin: 0;">Your Guide to the Best Tech on Amazon</p>
+    </div>
 </header>
 
 <nav>
@@ -63,7 +67,6 @@
 </section>
 
 <div class="container">
-
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
         <h2>Smart Watch</h2>
@@ -91,7 +94,6 @@
         <p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office.</p>
         <a class="btn" href="https://www.amazon.com/HV-F2056-15-6-17-Laptop-Cooler-Cooling/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
-
 </div>
 
 <div class="bold-image-section">
