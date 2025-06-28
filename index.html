@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,91 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-        header { background: #0074D9; color: #fff; padding: 1rem; text-align: left; display: flex; align-items: center; }
-        nav { background: #005fa3; padding: 0.5rem; text-align: center; }
-        nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-        .hero { background: #e0f0ff; padding: 2rem; text-align: center; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-        .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
-        .product-card h2 { margin-top: 0; }
-        .product-card img { max-width: 500px; float: left; margin-right: 1rem; }
-        .product-card .features { margin: 1rem 0; }
-        .btn { background: #FF4136; color: #fff; padding: 0.5rem 1rem; text-decoration: none; display: inline-block; border-radius: 3px; font-size: 1.2rem; }
-        .bold-image-section { text-align: center; margin: 2rem 0; }
+        
+        header { 
+            background: #0074D9; 
+            color: #fff; 
+            padding: 0.5rem 1rem; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .hamburger {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+        }
+        .hamburger div {
+            background: #fff;
+            height: 6px;
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .logo {
+            height: 90px;
+        }
+
+        nav {
+            background: #005fa3;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: #e0f0ff;
+            padding: 2rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .product-card {
+            background: #fff;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .product-card h2 {
+            margin-top: 0;
+        }
+        .product-card img {
+            max-width: 500px;
+            float: left;
+            margin-right: 1rem;
+        }
+        .product-card .features {
+            margin: 1rem 0;
+        }
+        .btn {
+            background: #FF4136;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 3px;
+            font-size: 1.2rem;
+        }
+        .bold-image-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
         .bold-image-section img {
             width: 98%;
             max-width: 1000px;
@@ -27,83 +102,88 @@
             display: block;
             margin: 20px auto;
         }
-        .highlight-text { 
-            font-family: 'Arial Black', sans-serif; 
-            font-size: 1.8rem; 
-            color: #0074D9; 
-            font-weight: bold; 
-            margin-top: 1rem; 
+        .highlight-text {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.8rem;
+            color: #0074D9;
+            font-weight: bold;
+            margin-top: 1rem;
         }
-        .menu-icon {
-            font-size: 70px;
-            cursor: pointer;
+
+        footer {
+            background: #333;
             color: #fff;
-            margin-left: 10px;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
         }
-        .logo {
-            height: 100px;
-            margin-left: 10px;
+        .disclaimer {
+            font-size: 0.85rem;
+            margin-top: 1rem;
         }
-        .site-title {
-            font-size: 90px;
-            margin-left: 15px;
-            color: #fff;
-        }
-        #mySidenav {
+
+        /* Side Navigation */
+        .side-nav {
             height: 100%;
             width: 0;
             position: fixed;
-            z-index: 1;
             top: 0;
             left: 0;
-            background-color: rgba(0,0,0,0.85);
+            background-color: rgba(0, 0, 0, 0.85);
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
+            z-index: 999;
         }
-        #mySidenav a {
-            padding: 10px 30px;
+        .side-nav a {
+            padding: 8px 32px;
             text-decoration: none;
-            font-size: 28px;
+            font-size: 22px;
             color: #fff;
             display: block;
             transition: 0.3s;
         }
-        #mySidenav a:hover {
+        .side-nav a:hover {
             background: #0074D9;
         }
-        #mySidenav .closebtn {
+        .side-nav .close-btn {
             position: absolute;
             top: 15px;
             right: 25px;
             font-size: 36px;
             color: #fff;
+            cursor: pointer;
         }
-        footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-        .disclaimer { font-size: 0.85rem; margin-top: 1rem; }@media (max-width: 600px) {
-        .product-card img { float: none; display: block; margin: 0 auto 1rem auto; max-width: 100%; }
-        .site-title { font-size: 40px; }
-        .logo { height: 60px; }
-        .menu-icon { font-size: 50px; }
-    }
-</style>
 
+        @media (max-width: 600px) {
+            .product-card img {
+                float: none;
+                display: block;
+                margin: 0 auto 1rem auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <span class="menu-icon" onclick="openNav()">&#9776;</span>
-        <img src="logo.png" alt="TechSmart Logo" class="logo">
-        <h1 class="site-title">TechSmart</h1>
-    </header><div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+<header>
+    <div class="hamburger" onclick="openNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <img src="logo.png" alt="TechSmart Logo" class="logo">
+</header>
+
+<div id="mySidenav" class="side-nav">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
     <a href="#">Home</a>
     <a href="#">Top Picks</a>
     <a href="#">Categories</a>
     <a href="#">Contact</a>
     <a href="#">Reviews</a>
     <a href="#">Best Deals</a>
-    <a href="#">Trending Tech</a>
-    <a href="#">New Arrivals</a>
+    <a href="#">About Us</a>
     <a href="#">Support</a>
 </div>
 
@@ -119,23 +199,26 @@
         <p>Stay connected with this sleek, feature-packed smart watch for fitness and daily use.</p>
         <a class="btn" href="https://www.amazon.com/dp/B09G3HRP7Y?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
+
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71xkLShQhPL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
         <h2>Bluetooth Speaker</h2>
         <p>Powerful, portable speaker with crystal-clear sound and deep bass for any occasion.</p>
         <a class="btn" href="https://www.amazon.com/dp/B07W7QX6XY?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
+
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61OHplw85eL._AC_SL1500_.jpg" alt="Wireless Headphones">
         <h2>Wireless Headphones</h2>
         <p>Soundcore Anker Life Q20 Hybrid Noise Cancelling Headphones with 70H playtime and deep bass.</p>
         <a class="btn" href="https://a.co/d/b4quq4I?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
+
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
         <h2>HV-F2056 Laptop Cooling Pad (15.6 - 17")</h2>
         <p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office.</p>
-        <a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+        <a class="btn" href="https://www.amazon.com/HV-F2056-15-6-17-Laptop-Cooler-Cooling/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
 </div>
 
@@ -150,9 +233,8 @@
 
 <script>
     function openNav() {
-        document.getElementById("mySidenav").style.width = "70%";
+        document.getElementById("mySidenav").style.width = "75%";
     }
-
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
     }
