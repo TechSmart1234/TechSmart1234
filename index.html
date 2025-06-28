@@ -6,93 +6,143 @@
 <title>TechSmart - Best Tech Gadgets & Amazon Deals</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-header { background: #0074D9; color: #fff; padding: 1rem; text-align: center; position: relative; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
+    header { background: #0074D9; color: #fff; padding: 1rem; display: flex; align-items: center; }
+    header img { height: 90px; margin-left: 10px; }
+    .site-title { font-size: 90px; margin-left: 10px; color: #fff; flex: 1; }.hamburger {
+    font-size: 45px;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px;
+}
+
 nav { background: #005fa3; padding: 0.5rem; text-align: center; }
 nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+
 .hero { background: #e0f0ff; padding: 2rem; text-align: center; }
 .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
 .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
 .product-card h2 { margin-top: 0; }
 .product-card img { max-width: 500px; float: left; margin-right: 1rem; }
-.product-card .features { margin: 1rem 0; }
-.btn { background: #FF4136; color: #fff; padding: 0.5rem 1rem; text-decoration: none; display: inline-block; border-radius: 3px; font-size: 1.1rem; }
+.product-card p { font-size: 0.9rem; }
+.btn { background: #FF4136; color: #fff; padding: 0.5rem 1rem; text-decoration: none; display: inline-block; border-radius: 3px; font-size: 1.2rem; }
+
 .bold-image-section { text-align: center; margin: 2rem 0; }
-.bold-image-section img { width: 98%; max-width: 1000px; height: auto; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.3); display: block; margin: 20px auto; }
+.bold-image-section img {
+    width: 98%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    display: block;
+    margin: 20px auto;
+}
 .highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.8rem; color: #0074D9; font-weight: bold; margin-top: 1rem; }
+
 footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
 .disclaimer { font-size: 0.85rem; margin-top: 1rem; }
-.product-card p { font-size: 0.9rem; }
-.hamburger { font-size: 35px; cursor: pointer; position: absolute; top: 20px; left: 20px; z-index: 1001; color: #fff; }
-.side-nav { height: 100%; width: 0; position: fixed; z-index: 1000; top: 0; left: 0; background-color: #005fa3; overflow-x: hidden; transition: 0.3s; padding-top: 60px; }
-.side-nav a { padding: 8px 20px; text-decoration: none; font-size: 18px; color: #fff; display: block; transition: 0.3s; }
-.side-nav a:hover { background-color: #0074D9; }
-.side-nav .closebtn { position: absolute; top: 20px; right: 25px; font-size: 36px; cursor: pointer; }
-#logo-title-container { display: flex; align-items: center; justify-content: center; gap: 10px; }
-#logo-title-container img { height: 90px; }
-#logo-title-container h1 { font-size: 90px; margin: 0; color: #fff; }
-@media (max-width: 600px) {
-.product-card img { float: none; display: block; margin: 0 auto 1rem auto; }
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 116, 217, 0.7);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    backdrop-filter: blur(4px);
 }
+
+.side-nav a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+.side-nav a:hover { background: rgba(255, 255, 255, 0.2); }
+
+.closebtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2rem;
+    margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+    .product-card img { float: none; display: block; margin: 0 auto 1rem auto; }
+}
+
 </style>
 </head>
-<body><div class="hamburger" onclick="openNav()">&#9776;</div>
-<div id="sideMenu" class="side-nav">
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<a href="#">Home</a>
-<a href="#">Top Tech Picks</a>
-<a href="#">Smart Gadgets</a>
-<a href="#">Laptop Accessories</a>
-<a href="#">Audio Devices</a>
-<a href="#">Contact Us</a>
-<a href="#">About TechSmart</a>
-</div><header>
-<div id="logo-title-container">
-<img src="logo.png" alt="TechSmart Logo">
-<h1>TechSmart</h1>
+<body>
+    <header>
+        <span class="hamburger" onclick="openNav()">&#9776;</span>
+        <img src="logo.png" alt="TechSmart Logo">
+        <span class="site-title">TechSmart</span>
+    </header><div id="mySidenav" class="side-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Top Picks</a>
+    <a href="#">Categories</a>
+    <a href="#">Best Deals</a>
+    <a href="#">Reviews</a>
+    <a href="#">Tech News</a>
+    <a href="#">Contact</a>
 </div>
-<p>Your Guide to the Best Tech on Amazon</p>
-</header><nav>
-<a href="#">Home</a>
-<a href="#">Top Picks</a>
-<a href="#">Categories</a>
-<a href="#">Contact</a>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Top Picks</a>
+    <a href="#">Categories</a>
+    <a href="#">Contact</a>
 </nav><section class="hero">
-<h1>Explore Top Tech Gadgets for 2025</h1>
-<p>Tested, Reviewed, and Recommended for You</p>
+    <h1>Explore Top Tech Gadgets for 2025</h1>
+    <p>Tested, Reviewed, and Recommended for You</p>
 </section><div class="container">
-<div class="product-card">
-<img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
-<h2>Smart Watch</h2>
-<p>Stay connected with this sleek, feature-packed smart watch for fitness and daily use.</p>
-<a class="btn" href="https://www.amazon.com/dp/B09G3HRP7Y?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-</div><div class="product-card">
-<img src="https://m.media-amazon.com/images/I/71xkLShQhPL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
-<h2>Bluetooth Speaker</h2>
-<p>Powerful, portable speaker with crystal-clear sound and deep bass for any occasion.</p>
-<a class="btn" href="https://www.amazon.com/dp/B07W7QX6XY?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-</div><div class="product-card">
-<img src="https://m.media-amazon.com/images/I/61OHplw85eL._AC_SL1500_.jpg" alt="Wireless Headphones">
-<h2>Wireless Headphones</h2>
-<p>Soundcore Anker Life Q20 Hybrid Noise Cancelling Headphones with 70H playtime and deep bass.</p>
-<a class="btn" href="https://a.co/d/b4quq4I?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-</div><div class="product-card">
-<img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
-<h2>HV-F2056 Laptop Cooling Pad (15.6 - 17")</h2>
-<p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office.</p>
-<a class="btn" href="https://www.amazon.com/HV-F2056-15-6-17-Laptop-Cooler-Cooling/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
+        <h2>Smart Watch</h2>
+        <p>Stay connected with this sleek, feature-packed smart watch for fitness and daily use.</p>
+        <a class="btn" href="https://www.amazon.com/dp/B09G3HRP7Y?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+    </div><div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71xkLShQhPL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
+    <h2>Bluetooth Speaker</h2>
+    <p>Powerful, portable speaker with crystal-clear sound and deep bass for any occasion.</p>
+    <a class="btn" href="https://www.amazon.com/dp/B07W7QX6XY?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
 </div>
+
+<div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/61OHplw85eL._AC_SL1500_.jpg" alt="Wireless Headphones">
+    <h2>Wireless Headphones</h2>
+    <p>Soundcore Anker Life Q20 Hybrid Noise Cancelling Headphones with 70H playtime and deep bass.</p>
+    <a class="btn" href="https://a.co/d/b4quq4I?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+</div>
+
+<div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
+    <h2>HV-F2056 Laptop Cooling Pad (15.6 - 17")</h2>
+    <p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office.</p>
+    <a class="btn" href="https://www.amazon.com/HV-F2056-15-6-17-Laptop-Cooler-Cooling/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+</div>
+
 </div><div class="bold-image-section">
-<img src="laptop-user.jpg" alt="Woman Using Laptop">
-<h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
+    <img src="laptop-user.jpg" alt="Woman Using Laptop">
+    <h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
 </div><footer>
-<p>&copy; 2025 TechSmart. All Rights Reserved.</p>
+    <p>&copy; 2025 TechSmart. All Rights Reserved.</p>
 </footer><script>
 function openNav() {
-  document.getElementById("sideMenu").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "250px";
 }
 function closeNav() {
-  document.getElementById("sideMenu").style.width = "0";
+    document.getElementById("mySidenav").style.width = "0";
 }
 </script></body>
 </html>
