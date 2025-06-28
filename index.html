@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,102 +7,19 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-
-        header {
-            height: 220px;
-            background: #0074D9;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .hamburger {
-            width: 70px;
-            height: 70px;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 8px;
-        }
-        .hamburger div {
-            background: #fff;
-            height: 6px;
-            width: 100%;
-            border-radius: 2px;
-        }
-
-        .logo-container {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .logo {
-            height: 200px;
-        }
-
-        nav {
-            background: #005fa3;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .hero {
-            background: #e0f0ff;
-            padding: 2rem;
-            text-align: center;
-        }
-        .hero p {
-            font-size: 0.95rem;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .product-card {
-            background: #fff;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .product-card h2 {
-            margin-top: 0;
-            font-size: 1.3rem;
-        }
-        .product-card p {
-            font-size: 0.85rem;
-        }
-        .product-card img {
-            max-width: 500px;
-            float: left;
-            margin-right: 1rem;
-        }
-        .btn {
-            background: #FF4136;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 3px;
-            font-size: 1.2rem;
-        }
-        .bold-image-section {
-            text-align: center;
-            margin: 2rem 0;
-        }
+        header { background: #0074D9; color: #fff; padding: 0.5rem 1rem; display: flex; align-items: center; justify-content: space-between; height: 320px; }
+        .logo { height: 300px; }
+        nav { background: #005fa3; padding: 0.5rem; text-align: center; }
+        nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+        .hero { background: #e0f0ff; padding: 2rem; text-align: center; }
+        .hero p { font-size: 0.9rem; }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+        .product-card h2 { margin-top: 0; font-size: 1.2rem; }
+        .product-card img { max-width: 500px; float: left; margin-right: 1rem; }
+        .product-card p { font-size: 0.85rem; }
+        .btn { background: #FF4136; color: #fff; padding: 0.7rem 1.5rem; text-decoration: none; display: inline-block; border-radius: 3px; font-size: 1rem; font-weight: bold; }
+        .bold-image-section { text-align: center; margin: 2rem 0; }
         .bold-image-section img {
             width: 98%;
             max-width: 1000px;
@@ -120,90 +36,82 @@
             font-weight: bold;
             margin-top: 1rem;
         }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+        .hamburger {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
-
-        /* Side Navigation */
-        .side-nav {
+        .hamburger div {
+            width: 45px;
+            height: 8px;
+            background-color: white;
+        }
+        .sidenav {
             height: 100%;
             width: 0;
             position: fixed;
+            z-index: 1;
             top: 0;
             left: 0;
             background-color: rgba(0, 0, 0, 0.85);
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
-            z-index: 999;
         }
-        .side-nav a {
-            padding: 8px 32px;
+        .sidenav a {
+            padding: 15px 25px;
             text-decoration: none;
             font-size: 22px;
-            color: #fff;
+            color: white;
             display: block;
             transition: 0.3s;
         }
-        .side-nav a:hover {
-            background: #0074D9;
-        }
-        .side-nav .close-btn {
+        .sidenav a:hover { background: #0074D9; }
+        .sidenav .closebtn {
             position: absolute;
-            top: 15px;
+            top: 20px;
             right: 25px;
             font-size: 36px;
-            color: #fff;
+            color: white;
             cursor: pointer;
         }
-
+        footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+        .disclaimer { font-size: 0.85rem; margin-top: 1rem; }
         @media (max-width: 600px) {
-            .product-card img {
-                float: none;
-                display: block;
-                margin: 0 auto 1rem auto;
-            }
+            .product-card img { float: none; display: block; margin: 0 auto 1rem auto; }
+            .btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
         }
     </style>
 </head>
 <body>
-
-<header>
+    <div id="mySidenav" class="sidenav">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <a href="#">Home</a>
+        <a href="#">Top Picks</a>
+        <a href="#">Categories</a>
+        <a href="#">Reviews</a>
+        <a href="#">Best Deals</a>
+        <a href="#">Contact</a>
+        <a href="#">Tech News</a>
+    </div><header>
     <div class="hamburger" onclick="openNav()">
         <div></div>
         <div></div>
         <div></div>
     </div>
-    <div class="logo-container">
-        <img src="logo.png" alt="TechSmart Logo" class="logo">
-    </div>
+    <img src="logo.png" alt="TechSmart Logo" class="logo">
 </header>
 
 <nav>
     <a href="#">Home</a>
+    <a href="#">Top Picks</a>
     <a href="#">Categories</a>
-    <a href="#">Contact</a>
     <a href="#">Reviews</a>
     <a href="#">Best Deals</a>
-    <a href="#">About Us</a>
-    <a href="#">Support</a>
+    <a href="#">Contact</a>
+    <a href="#">Tech News</a>
 </nav>
-
-<div id="mySidenav" class="side-nav">
-    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">Categories</a>
-    <a href="#">Contact</a>
-    <a href="#">Reviews</a>
-    <a href="#">Best Deals</a>
-    <a href="#">About Us</a>
-    <a href="#">Support</a>
-</div>
 
 <section class="hero">
     <h1>Explore Top Tech Gadgets for 2025</h1>
@@ -236,7 +144,7 @@
         <img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
         <h2>HV-F2056 Laptop Cooling Pad (15.6 - 17")</h2>
         <p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office.</p>
-        <a class="btn" href="https://www.amazon.com/HV-F2056-15-6-17-Laptop-Cooler-Cooling/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+        <a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
 </div>
 
@@ -251,7 +159,7 @@
 
 <script>
     function openNav() {
-        document.getElementById("mySidenav").style.width = "75%";
+        document.getElementById("mySidenav").style.width = "70%";
     }
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
