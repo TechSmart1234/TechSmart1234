@@ -7,25 +7,26 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-        
-        header { 
-            background: #0074D9; 
-            color: #fff; 
-            padding: 1rem; 
-            display: flex; 
-            align-items: center; 
+
+        header {
+            background: #0074D9;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
             justify-content: start;
+            position: relative;
         }
-        
+
         .hamburger {
-            cursor: pointer;
             width: 80px;
             height: 80px;
+            cursor: pointer;
             margin-right: 15px;
         }
 
         .logo {
-            height: 100px;
+            height: 200px;
             margin-left: 20px;
             margin-right: 10px;
         }
@@ -134,6 +135,41 @@
             margin-top: 2rem;
         }
 
+        /* Side Navigation Menu */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 116, 217, 0.95);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 10px 30px;
+            text-decoration: none;
+            font-size: 22px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background: #005fa3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
         @media (max-width: 600px) {
             .product-card img {
                 float: none;
@@ -146,8 +182,19 @@
 </head>
 <body>
 
+<div id="mySidenav" class="sidenav">
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="#">Home</a>
+    <a href="#">Top Picks</a>
+    <a href="#">Categories</a>
+    <a href="#">Contact</a>
+    <a href="#">Reviews</a>
+    <a href="#">Best Deals</a>
+    <a href="#">Support</a>
+</div>
+
 <header>
-    <img src="hamburger.png" alt="Menu" class="hamburger">
+    <img src="hamburger.png" alt="Menu" class="hamburger" onclick="openNav()">
     <img src="logo.png" alt="TechSmart Logo" class="logo">
     <div class="site-title">TechSmart</div>
 </header>
@@ -202,6 +249,16 @@
 <footer>
     <p>&copy; 2025 TechSmart. All Rights Reserved.</p>
 </footer>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "60%";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
 
 </body>
 </html>
