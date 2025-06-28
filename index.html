@@ -7,38 +7,108 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-    header { background: #0074D9; color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 1rem; }
+    
+    header {
+        background: #0074D9;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
     .logo { height: 80px; }
     .site-title { font-size: 2rem; font-weight: bold; color: #fff; margin-left: 10px; }
     .menu-icon { width: 60px; height: 60px; cursor: pointer; }
+
     nav { background: #005fa3; display: flex; justify-content: center; padding: 0.5rem; }
     nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+
     .hero { background: #e0f0ff; padding: 2rem; text-align: center; }
     .hero p { font-size: 0.9rem; }
+
     .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-    .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+    
+    .product-card {
+        background: #fff;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
     .product-card h2 { margin-top: 0; }
     .product-card img { max-width: 500px; float: left; margin-right: 1rem; }
     .product-card p { font-size: 0.85rem; }
-    .btn { background: #FF4136; color: #fff; padding: 0.7rem 1.2rem; font-size: 1rem; text-decoration: none; display: inline-block; border-radius: 3px; }
+    .btn {
+        background: #FF4136;
+        color: #fff;
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 3px;
+    }
+
     .bold-image-section { text-align: center; margin: 2rem 0; }
-    .bold-image-section img { width: 95%; max-width: 1000px; height: auto; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
-    .highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.8rem; color: #0074D9; font-weight: bold; margin-top: 1rem; }
+    .bold-image-section img {
+        width: 95%;
+        max-width: 1000px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    .highlight-text {
+        font-family: 'Arial Black', sans-serif;
+        font-size: 1.8rem;
+        color: #0074D9;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
     footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-    .side-nav { height: 100%; width: 0; position: fixed; top: 0; left: 0; background: rgba(0, 116, 217, 0.95); overflow-x: hidden; transition: 0.5s; padding-top: 60px; }
-    .side-nav a { padding: 10px 20px; text-decoration: none; font-size: 1.4rem; color: #fff; display: block; }
-    .side-nav .close-btn { position: absolute; top: 20px; right: 25px; font-size: 2rem; }
+
+    /* Side Navigation */
+    .side-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 116, 217, 0.95);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 999;
+    }
+    .side-nav a {
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #fff;
+        display: block;
+    }
+    .side-nav .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
     @media (max-width: 600px) {
         .product-card img { float: none; display: block; margin: 0 auto 1rem auto; }
     }
 </style>
 </head>
+
 <body>
 
 <header>
     <img src="hamburger.png" alt="Menu" class="menu-icon" onclick="openNav()">
-    <img src="logo.png" alt="Logo" class="logo">
-    <h1 class="site-title">TechSmart</h1>
+    <div style="display: flex; align-items: center;">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1 class="site-title">TechSmart</h1>
+    </div>
 </header>
 
 <nav>
@@ -48,16 +118,37 @@
     <a href="#">Contact</a>
 </nav>
 
-<div class="hero">
+<section class="hero">
     <h1>Explore Top Tech Gadgets for 2025</h1>
     <p>Tested, Reviewed, and Recommended for You</p>
-</div>
+</section>
 
 <div class="container">
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
         <h2>Smart Watch</h2>
         <p>Stay connected with this sleek, feature-packed smart watch for fitness and daily use.</p>
+        <a class="btn" href="#">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71xkLShQhPL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
+        <h2>Bluetooth Speaker</h2>
+        <p>Powerful, portable speaker with crystal-clear sound and deep bass for any occasion.</p>
+        <a class="btn" href="#">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61OHplw85eL._AC_SL1500_.jpg" alt="Wireless Headphones">
+        <h2>Wireless Headphones</h2>
+        <p>Soundcore Anker Life Q20 Hybrid Noise Cancelling Headphones with 70H playtime and deep bass.</p>
+        <a class="btn" href="#">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
+        <h2>Laptop Cooling Pad</h2>
+        <p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office.</p>
         <a class="btn" href="#">View on Amazon</a>
     </div>
 </div>
@@ -71,6 +162,7 @@
     <p>&copy; 2025 TechSmart. All Rights Reserved.</p>
 </footer>
 
+<!-- Side Navigation -->
 <div id="sideNav" class="side-nav">
     <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
     <a href="#">Home</a>
