@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,20 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
         header { background: #0074D9; color: #fff; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
-        nav { background: #005fa3; padding: 0.5rem; text-align: center; display: none; }
-        nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; display: inline-block; }
+        header img { height: 60px; }
+        header h1 { margin: 0; font-size: 1.8rem; }
+        nav { background: #005fa3; padding: 0.5rem; display: flex; justify-content: center; align-items: center; position: relative; }
+        nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+        .menu-toggle { display: none; flex-direction: column; cursor: pointer; position: absolute; right: 1rem; top: 0.5rem; }
+        .menu-toggle span { background: #fff; height: 3px; width: 25px; margin: 4px 0; }
+
+        @media (max-width: 768px) {
+            nav a { display: none; }
+            nav.active a { display: block; margin: 1rem 0; }
+            nav { flex-direction: column; align-items: flex-start; }
+            .menu-toggle { display: flex; }
+        }
+
         .hero { background: #e0f0ff; padding: 2rem; text-align: center; }
         .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
         .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
@@ -18,40 +31,42 @@
         .btn { background: #FF4136; color: #fff; padding: 0.5rem 1rem; text-decoration: none; display: inline-block; border-radius: 3px; }
         .bold-image-section { text-align: center; margin: 2rem 0; }
         .bold-image-section img {
-            width: 98%; max-width: 1000px; height: auto; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.3); display: block; margin: 20px auto;
+            width: 98%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            display: block;
+            margin: 20px auto;
         }
         .highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.8rem; color: #0074D9; font-weight: bold; margin-top: 1rem; }
         footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-        .disclaimer { font-size: 0.85rem; margin-top: 1rem; }
-        .logo { height: 60px; }
-        .hamburger { cursor: pointer; display: block; }
-        .hamburger div { width: 25px; height: 3px; background: #fff; margin: 5px 0; }
-        @media (min-width: 700px) {
-            nav { display: block !important; }
-            .hamburger { display: none; }
-        }
     </style>
 </head>
 <body>
+
 <header>
-    <img src="logo.png" alt="TechSmart Logo" class="logo">
+    <img src="logo.png" alt="TechSmart Logo">
     <h1>TechSmart</h1>
-    <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
 </header>
-<nav id="navMenu">
+
+<nav id="navbar">
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <a href="#">Home</a>
     <a href="#">Top Picks</a>
     <a href="#">Categories</a>
     <a href="#">Contact</a>
 </nav>
+
 <section class="hero">
     <h1>Explore Top Tech Gadgets for 2025</h1>
     <p>Tested, Reviewed, and Recommended for You</p>
 </section>
+
 <div class="container">
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
@@ -59,18 +74,21 @@
         <p>Stay connected with this sleek, feature-packed smart watch for fitness and daily use.</p>
         <a class="btn" href="https://www.amazon.com/dp/B09G3HRP7Y?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
+
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71xkLShQhPL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
         <h2>Bluetooth Speaker</h2>
         <p>Powerful, portable speaker with crystal-clear sound and deep bass for any occasion.</p>
         <a class="btn" href="https://www.amazon.com/dp/B07W7QX6XY?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
+
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61OHplw85eL._AC_SL1500_.jpg" alt="Wireless Headphones">
         <h2>Wireless Headphones</h2>
         <p>Soundcore Anker Life Q20 Hybrid Noise Cancelling Headphones with 70H playtime and deep bass.</p>
         <a class="btn" href="https://a.co/d/b4quq4I?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
+
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
         <h2>HV-F2056 Laptop Cooling Pad (15.6 - 17")</h2>
@@ -78,22 +96,24 @@
         <a class="btn" href="https://www.amazon.com/HV-F2056-15-6-17-Laptop-Cooler-Cooling/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
 </div>
+
 <div class="bold-image-section">
     <img src="laptop-user.jpg" alt="Woman Using Laptop">
     <h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
 </div>
+
 <footer>
     <p>&copy; 2025 TechSmart. All Rights Reserved.</p>
 </footer>
+
 <script>
-function toggleMenu() {
-    const nav = document.getElementById('navMenu');
-    if (nav.style.display === 'block') {
-        nav.style.display = 'none';
-    } else {
-        nav.style.display = 'block';
-    }
-}
+const toggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
+
+toggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+});
 </script>
+
 </body>
 </html>
