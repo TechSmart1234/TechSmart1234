@@ -73,11 +73,18 @@
 }
 
 @keyframes slideShow {
-    0%   { background-image: url('Woman-using.laptop.jpg'); }
-    25%  { background-image: url('Woman-using.headphone.jpg'); }
-    50%  { background-image: url('Man-using.mobilephone.jpg'); }
-    75%  { background-image: url('Techgardget.jpg'); }
-    100% { background-image: url('Woman-using.laptop.jpg'); }
+    0%, 25% {
+        background-image: url('Woman-using.laptop.jpg');
+    }
+    25%, 50% {
+        background-image: url('Woman-using.headphone.jpg');
+    }
+    50%, 75% {
+        background-image: url('Man-using.mobilephone.jpg');
+    }
+    75%, 100% {
+        background-image: url('Techgardget.jpg');
+    }
 }
 
     .hero { background: #e0f0ff; padding: 0.8rem; text-align: center; }
