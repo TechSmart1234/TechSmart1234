@@ -13,21 +13,24 @@ header { display: flex; align-items: center; background: #0074D9; color: #fff; p
 header img { height: 80px; margin-left: 10px; }
 header h1 { margin-left: 10px; font-size: 1rem; }.sidenav { height: 100%; width: 0; position: fixed; z-index: 1; top: 0; left: 0; background: rgba(0, 116, 217, 0.9); overflow-x: hidden; transition: 0.5s; padding-top: 60px; } .sidenav a { padding: 10px 30px; text-decoration: none; font-size: 24px; color: #fff; display: block; transition: 0.3s; } .sidenav a:hover { background: #005fa3; } .closebtn { position: absolute; top: 10px; right: 25px; font-size: 50px; cursor: pointer; }
 
-.hero { position: relative; height: 400px; text-align: center; color: #fff; display: flex; flex-direction: column; justify-content: center; overflow: hidden; } .hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; animation: slideShow 16s infinite; z-index: -1; opacity: 1; } @keyframes slideShow {
-    0%, 20% {
+.hero { position: relative; height: 400px; text-align: center; color: #fff; display: flex; flex-direction: column; justify-content: center; overflow: hidden; } .hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; animation: slideShow 16s infinite; z-index: -1; opacity: 1; }@keyframes slideShow {
+    0%, 16.66% {
         background-image: url('Woman-using.laptop.jpg');
     }
-    20%, 40% {
+    16.66%, 33.33% {
         background-image: url('Woman-using.headphone.jpg');
     }
-    40%, 60% {
+    33.33%, 50% {
         background-image: url('Man-using.mobilephone.jpg');
     }
-    60%, 80% {
+    50%, 66.66% {
+        background-image: url('Techgardget.jpg');
+    }
+    66.66%, 83.33% {
         background-image: url('findout-new.tech.jpg');
     }
-    80%, 100% {
-        background-image: url('Techgardget.jpg');
+    83.33%, 100% {
+        background-image: url('technology.key.jpg');
     }
 }
 .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; } .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; } .product-card p { font-size: 0.55rem; } .product-card h2 { margin-top: 0; } .product-card img { max-width: 200px; float: left; margin-right: 1rem; } .btn { background: #FF4136; color: #fff; padding: 0.7rem 1.5rem; text-decoration: none; display: inline-block; border-radius: 3px; font-size: 1rem; } .bold-image-section { text-align: center; margin: 2rem 0; } .bold-image-section img { width: 98%; max-width: 1000px; height: auto; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.3); display: block; margin: 20px auto; } .highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.8rem; color: #0074D9; font-weight: bold; margin-top: 1rem; } footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; } @media (max-width: 600px) { .product-card img { float: none; display: block; margin: 0 auto 1rem auto; } } </style>
