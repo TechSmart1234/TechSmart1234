@@ -69,6 +69,42 @@
 
     @media (max-width: 600px) {
         .product-card img { float: none; display: block; margin: 0 auto 1rem auto; }
+        .hero {
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 15s infinite;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes slideshow {
+    0%   { background-image: url('laptop-user.jpg'); }
+    33%  { background-image: url('headphone-user.jpg'); }
+    66%  { background-image: url('phone-user.jpg'); }
+    100% { background-image: url('laptop-user.jpg'); }
+}
     }
 </style>
 
