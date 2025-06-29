@@ -1,164 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechSmart - Best Tech Gadgets & Amazon Deals</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f8f9fa;
-        color: #333;
-    }
-    header {
-        background: #0074D9;
-        color: #fff;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-    }
-    .menu-icon {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        margin-right: 1rem;
-    }
-    .logo {
-        height: 80px;
-        margin-right: 1rem;
-    }
-    .site-title {
-        font-size: 1.8rem;
-        font-weight: bold;
-    }
-    nav {
-        background: #005fa3;
-        padding: 0.5rem;
-        text-align: center;
-    }
-    nav a {
-        color: #fff;
-        margin: 0 1rem;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .hero {
-        background: #e0f0ff;
-        padding: 2rem;
-        text-align: center;
-    }
-    .container {
-        max-width: 1000px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
-    .product-card {
-        background: #fff;
-        padding: 1rem;
-        margin-bottom: 1.5rem;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        overflow: hidden;
-    }
-    .product-card h2 {
-        margin-top: 0;
-        font-size: 1.2rem;
-    }
-    .product-card img {
-        max-width: 200px;
-        float: left;
-        margin-right: 1rem;
-    }
-    .product-card p {
-        font-size: 0.9rem;
-    }
-    .btn {
-        background: #FF4136;
-        color: #fff;
-        padding: 0.5rem 1rem;
-        text-decoration: none;
-        display: inline-block;
-        border-radius: 3px;
-        font-size: 1rem;
-        font-weight: bold;
-    }
-    .bold-image-section {
-        text-align: center;
-        margin: 2rem 0;
-    }
-    .bold-image-section img {
-        width: 95%;
-        max-width: 1000px;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        display: block;
-        margin: 20px auto;
-    }
-    .highlight-text {
-        font-family: 'Arial Black', sans-serif;
-        font-size: 1.8rem;
-        color: #0074D9;
-        font-weight: bold;
-        margin-top: 1rem;
-    }
-    footer {
-        background: #333;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-        margin-top: 2rem;
-    }
-
-    /* Side Navigation */
-    .sidenav {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechSmart - Top Tech Gadget Reviews & Best Amazon Deals">
+    <title>TechSmart - Best Tech Gadgets & Amazon Deals</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
+        header { display: flex; align-items: center; background: #0074D9; color: #fff; padding: 1rem; }
+        .hamburger { font-size: 80px; cursor: pointer; }
+        header img { height: 80px; margin-left: 10px; }
+        header h1 { margin-left: 10px; font-size: 2rem; }.sidenav {
         height: 100%;
         width: 0;
         position: fixed;
+        z-index: 1;
         top: 0;
         left: 0;
-        background: rgba(0, 74, 157, 0.9); 
-        backdrop-filter: blur(3px);
+        background: rgba(0, 116, 217, 0.9);
         overflow-x: hidden;
         transition: 0.5s;
-        z-index: 1000;
         padding-top: 60px;
     }
+
     .sidenav a {
         padding: 10px 30px;
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 24px;
         color: #fff;
         display: block;
         transition: 0.3s;
     }
+
     .sidenav a:hover {
-        background: rgba(255,255,255,0.1);
+        background: #005fa3;
     }
-    .sidenav .closebtn {
+
+    .closebtn {
         position: absolute;
-        top: 20px;
+        top: 10px;
         right: 25px;
-        font-size: 2rem;
+        font-size: 50px;
         cursor: pointer;
-        color: #fff;
     }
+
+    .hero { background: #e0f0ff; padding: 2rem; text-align: center; }
+    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
+    .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+    .product-card h2 { margin-top: 0; }
+    .product-card img { max-width: 500px; float: left; margin-right: 1rem; }
+    .btn { background: #FF4136; color: #fff; padding: 0.7rem 1.5rem; text-decoration: none; display: inline-block; border-radius: 3px; font-size: 1rem; }
+
+    .bold-image-section { text-align: center; margin: 2rem 0; }
+    .bold-image-section img {
+        width: 98%; max-width: 1000px; height: auto; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.3); display: block; margin: 20px auto;
+    }
+    .highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.8rem; color: #0074D9; font-weight: bold; margin-top: 1rem; }
+
+    footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+
     @media (max-width: 600px) {
-        .product-card img {
-            float: none;
-            display: block;
-            margin: 0 auto 1rem auto;
-        }
+        .product-card img { float: none; display: block; margin: 0 auto 1rem auto; }
     }
 </style>
+
 </head>
 <body>
-
-<!-- Side Navigation -->
-<div id="mySidenav" class="sidenav">
+    <header>
+        <span class="hamburger" onclick="openNav()">&#9776;</span>
+        <img src="logo.png" alt="TechSmart Logo">
+        <h1>TechSmart</h1>
+    </header><div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">Home</a>
     <a href="#">Top Picks</a>
@@ -166,34 +79,15 @@
     <a href="#">Contact</a>
     <a href="#">Reviews</a>
     <a href="#">Best Deals</a>
-    <a href="#">Tech News</a>
-    <a href="#">Support</a>
+    <a href="#">About Us</a>
 </div>
 
-<!-- Header Section -->
-<header>
-    <img src="menu.png" class="menu-icon" onclick="openNav()" alt="Menu">
-    <img src="logo.png" alt="TechSmart Logo" class="logo">
-    <span class="site-title">TechSmart</span>
-</header>
-
-<!-- Navigation Bar -->
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Top Picks</a>
-    <a href="#">Categories</a>
-    <a href="#">Contact</a>
-</nav>
-
-<!-- Hero Section -->
 <section class="hero">
     <h1>Explore Top Tech Gadgets for 2025</h1>
-    <p style="font-size: 0.9rem;">Tested, Reviewed, and Recommended for You</p>
+    <p>Tested, Reviewed, and Recommended for You</p>
 </section>
 
-<!-- Product Listings -->
 <div class="container">
-
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
         <h2>Smart Watch</h2>
@@ -218,24 +112,28 @@
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
         <h2>HV-F2056 Laptop Cooling Pad (15.6 - 17")</h2>
-        <p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office use.</p>
+        <p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office.</p>
         <a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
-
 </div>
 
-<!-- Footer -->
+<div class="bold-image-section">
+    <img src="laptop-user.jpg" alt="Woman Using Laptop">
+    <h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
+</div>
+
 <footer>
     <p>&copy; 2025 TechSmart. All Rights Reserved.</p>
 </footer>
 
 <script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "70%";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "70%";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
 </script>
 
 </body>
