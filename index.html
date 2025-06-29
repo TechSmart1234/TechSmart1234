@@ -1,100 +1,51 @@
 <!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TechSmart - Top Tech Gadget Reviews & Best Amazon Deals">
-    <title>TechSmart - Best Tech Gadgets & Amazon Deals</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-        header { display: flex; align-items: center; background: #0074D9; color: #fff; padding: 1rem; }
-        .menu-icon { height: 25px; width: 25px; cursor: pointer; }
-        .hamburger { font-size: 30px; cursor: pointer; }
-        header img { height: 80px; margin-left: 10px; }
-        header h1 { margin-left: 10px; font-size: 1rem; }
-        .sidenav {
-            height: 100%; width: 0; position: fixed; z-index: 1; top: 0; left: 0;
-            background: rgba(0, 116, 217, 0.9); overflow-x: hidden; transition: 0.5s; padding-top: 60px;
-        }
-        .sidenav a {
-            padding: 10px 30px; text-decoration: none; font-size: 24px; color: #fff; display: block; transition: 0.3s;
-        }
-        .sidenav a:hover { background: #005fa3; }
-        .closebtn { position: absolute; top: 10px; right: 25px; font-size: 50px; cursor: pointer; }.hero {
-        position: relative; height: 400px; text-align: center; color: #fff;
-        display: flex; flex-direction: column; justify-content: center; overflow: hidden;
-    }
-    .hero::before {
-        content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        background-size: cover; background-position: center; animation: slideShow 16s infinite;
-        z-index: -1; opacity: 0.4;
-    }
-    @keyframes slideShow {
-        0%, 14% { background-image: url('Woman-using.laptop.jpg'); }
-        14%, 28% { background-image: url('Woman-using.headphone.jpg'); }
-        28%, 42% { background-image: url('Man-using.mobilephone.jpg'); }
-        42%, 57% { background-image: url('Techgardget.jpg'); }
-        57%, 71% { background-image: url('findout-new.tech.jpg'); }
-        71%, 85% { background-image: url('technology.key.jpg'); }
-        85%, 100% { background-image: url('happy-tech.day.jpg'); }
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TechSmart - Top Tech Gadget Reviews & Best Amazon Deals">
+<title>TechSmart - Best Tech Gadgets & Amazon Deals</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
+header { display: flex; align-items: center; background: #0074D9; color: #fff; padding: 1rem; }
+.menu-icon { height: 25px; width: 25px; cursor: pointer; }
+.hamburger { font-size: 30px; cursor: pointer; }
+header img { height: 80px; margin-left: 10px; }
+header h1 { margin-left: 10px; font-size: 2rem; }.sidenav { height: 100%; width: 0; position: fixed; z-index: 1; top: 0; left: 0; background: rgba(0, 116, 217, 0.9); overflow-x: hidden; transition: 0.5s; padding-top: 60px; } .sidenav a { padding: 10px 30px; text-decoration: none; font-size: 24px; color: #fff; display: block; transition: 0.3s; } .sidenav a:hover { background: #005fa3; } .closebtn { position: absolute; top: 10px; right: 25px; font-size: 50px; cursor: pointer; }
 
-    .hero h1 { font-size: 2rem; font-weight: bold; text-shadow: 2px 2px 5px #000; }
-    .hero p { font-size: 1.1rem; text-shadow: 1px 1px 3px #000; }
-
-    .intro-gadgets {
-        text-align: center; padding: 1rem; background: #fff;
+.hero { position: relative; height: 400px; text-align: center; color: #fff; display: flex; flex-direction: column; justify-content: center; overflow: hidden; } .hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; animation: slideShow 16s infinite; z-index: -1; opacity: 1; }@keyframes slideShow {
+    0%, 14.28% {
+        background-image: url('Woman-using.laptop.jpg');
     }
-    .intro-gadgets h2 {
-        color: #0074D9; font-size: 1.5rem; margin-bottom: 1rem;
+    14.28%, 28.56% {
+        background-image: url('Woman-using.headphone.jpg');
     }
-    .intro-gallery {
-        display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;
+    28.56%, 42.84% {
+        background-image: url('Man-using.mobilephone.jpg');
     }
-    .intro-item img {
-        width: 120px; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    42.84%, 57.12% {
+        background-image: url('Techgardget.jpg');
     }
-
-    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-    .product-card {
-        background: #fff; padding: 1rem; margin-bottom: 1.5rem;
-        border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden;
+    57.12%, 71.4% {
+        background-image: url('findout-new.tech.jpg');
     }
-    .product-card p { font-size: 0.55rem; }
-    .product-card h2 { margin-top: 0; }
-    .product-card img { max-width: 200px; float: left; margin-right: 1rem; }
-    .btn {
-        background: #FF4136; color: #fff; padding: 0.7rem 1.5rem; text-decoration: none;
-        display: inline-block; border-radius: 3px; font-size: 1rem;
+    71.4%, 85.68% {
+        background-image: url('technology.key.jpg');
     }
-
-    .bold-image-section { text-align: center; margin: 2rem 0; }
-    .bold-image-section img {
-        width: 98%; max-width: 1000px; height: auto;
-        border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        display: block; margin: 20px auto;
+    85.68%, 100% {
+        background-image: url('happy-tech.day.jpg');
     }
-    .highlight-text {
-        font-family: 'Arial Black', sans-serif; font-size: 1.8rem; color: #0074D9;
-        font-weight: bold; margin-top: 1rem;
-    }
-
-    footer {
-        background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem;
-    }
-
-    @media (max-width: 600px) {
-        .product-card img { float: none; display: block; margin: 0 auto 1rem auto; }
-    }
-</style>
+}
+.container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; } .product-card { background: #fff; padding: 1rem; margin-bottom: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; } .product-card p { font-size: 0.55rem; } .product-card h2 { margin-top: 0; } .product-card img { max-width: 200px; float: left; margin-right: 1rem; } .btn { background: #FF4136; color: #fff; padding: 0.7rem 1.5rem; text-decoration: none; display: inline-block; border-radius: 3px; font-size: 1rem; } .bold-image-section { text-align: center; margin: 2rem 0; } .bold-image-section img { width: 98%; max-width: 1000px; height: auto; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.3); display: block; margin: 20px auto; } .highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.8rem; color: #0074D9; font-weight: bold; margin-top: 1rem; } footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; } @media (max-width: 600px) { .product-card img { float: none; display: block; margin: 0 auto 1rem auto; } } </style>
 
 </head>
 <body>
-    <header>
-        <span class="hamburger" onclick="openNav()">&#9776;</span>
-        <img src="logo.png" alt="TechSmart Logo">
-        <h1>TechSmart</h1>
-    </header><div id="mySidenav" class="sidenav">
+<header>
+    <span class="hamburger" onclick="openNav()">&#9776;</span>
+    <img src="logo.png" alt="TechSmart Logo">
+    <h1>TechSmart</h1>
+</header>
+<div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">Home</a>
     <a href="#">Top Picks</a>
@@ -104,39 +55,50 @@
     <a href="#">Best Deals</a>
     <a href="#">About Us</a>
 </div>
-
 <section class="hero">
     <h1>Explore Top Tech Gadgets for 2025</h1>
     <p>Tested, Reviewed, and Recommended for You</p>
 </section>
-
-<div class="intro-gadgets">
-    <h2>Discover Cutting-Edge Tech Gadgets</h2>
-    <div class="intro-gallery">
-        <div class="intro-item"><img src="smart-glasses.jpg" alt="Smart Glasses"></div>
-        <div class="intro-item"><img src="wireless-charging.dex.jpg" alt="Wireless Charging Dex"></div>
-        <div class="intro-item"><img src="earbud-translator.jpg" alt="Earbud Translator"></div>
-        <div class="intro-item"><img src="security.robot.jpg" alt="Security Robot"></div>
+<div class="container">
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
+        <h2>Smart Watch</h2>
+        <p>Stay connected with this sleek, feature-packed smart watch for fitness and daily use.</p>
+        <a class="btn" href="https://www.amazon.com/dp/B09G3HRP7Y?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71xkLShQhPL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
+        <h2>Bluetooth Speaker</h2>
+        <p>Powerful, portable speaker with crystal-clear sound and deep bass for any occasion.</p>
+        <a class="btn" href="https://www.amazon.com/dp/B07W7QX6XY?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61OHplw85eL._AC_SL1500_.jpg" alt="Wireless Headphones">
+        <h2>Wireless Headphones</h2>
+        <p>Soundcore Anker Life Q20 Hybrid Noise Cancelling Headphones with 70H playtime and deep bass.</p>
+        <a class="btn" href="https://a.co/d/b4quq4I?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
+        <h2>HV-F2056 Laptop Cooling Pad (15.6 - 17")</h2>
+        <p>Ultra Slim, Portable, Quiet Laptop Cooler with 3 Fans & USB Ports - Ideal for Gaming & Office.</p>
+        <a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
 </div>
-
-<div class="container">
-    <!-- Example Product Cards (keep your existing ones) -->
-</div>
-
 <div class="bold-image-section">
     <img src="laptop-user.jpg" alt="Woman Using Laptop">
     <h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
 </div>
-
 <footer>
     <p>&copy; 2025 TechSmart. All Rights Reserved.</p>
 </footer>
-
 <script>
-    function openNav() { document.getElementById("mySidenav").style.width = "70%"; }
-    function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+function openNav() {
+    document.getElementById("mySidenav").style.width = "70%";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 </script>
-
 </body>
 </html>
