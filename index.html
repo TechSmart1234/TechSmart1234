@@ -93,6 +93,37 @@
     <h1>Explore Top Tech Gadgets for 2025</h1>
     <p>Tested, Reviewed, and Recommended for You</p>
 </section>
+    .hero {
+    position: relative;
+    height: 350px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 16s infinite;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes slideShow {
+    0% { background-image: url('Woman-using.laptop.jpg'); }
+    25% { background-image: url('Woman-using.headphone.jpg'); }
+    50% { background-image: url('Man-using.mobilephone.jpg'); }
+    75% { background-image: url('Techgardget.jpg'); }
+    100% { background-image: url('Woman-using.laptop.jpg'); }
+}
 
 <div class="container">
     <div class="product-card">
