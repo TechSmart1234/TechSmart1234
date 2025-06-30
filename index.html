@@ -6,6 +6,10 @@
 <meta name="description" content="TechSmart - Top Tech Gadget Reviews & Best Amazon Deals">
 <title>TechSmart - Best Tech Gadgets & Amazon Deals</title>
 <link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Font Awesome for Cart Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
 body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
 header { display: flex; align-items: center; justify-content: space-between; background: #0074D9; color: #fff; padding: 0.8rem 1rem; flex-wrap: wrap; position: sticky; top: 0; z-index: 10; }
@@ -13,7 +17,10 @@ header { display: flex; align-items: center; justify-content: space-between; bac
 header img { height: 40px; margin: 0; }
 header h1 { font-size: 1.3rem; margin: 0 0 0 5px; }
 .hamburger { font-size: 24px; cursor: pointer; margin-right: 8px; display: block; }
+.right-section { display: flex; align-items: center; gap: 12px; }
 .search-bar { padding: 6px 10px; font-size: 14px; border: none; border-radius: 4px; width: 140px; max-width: 25%; }
+.cart-icon { position: relative; color: #fff; cursor: pointer; font-size: 20px; }
+.cart-count { position: absolute; top: -6px; right: -10px; background: red; color: #fff; border-radius: 50%; padding: 2px 6px; font-size: 12px; }
 .sidenav { height: 100%; width: 0; position: fixed; z-index: 999; top: 0; left: 0; background: rgba(0, 116, 217, 0.95); overflow-x: hidden; transition: 0.5s; padding-top: 60px; }
 .sidenav a { padding: 10px 30px; text-decoration: none; font-size: 22px; color: #fff; display: block; transition: 0.3s; }
 .sidenav a:hover { background: #005fa3; }
@@ -58,7 +65,14 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
         <img src="logo.png" alt="TechSmart Logo">
         <h1>TechSmart</h1>
     </div>
-    <input type="text" class="search-bar" placeholder="Search gadgets...">
+    
+    <div class="right-section">
+        <input type="text" class="search-bar" placeholder="Search gadgets...">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </div>
 </header>
 
 <div id="mySidenav" class="sidenav">
@@ -105,24 +119,6 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
         <h2>Smart Watch</h2>
         <p>Sleek, feature-packed for fitness and daily use.</p>
         <a class="btn" href="https://www.amazon.com/dp/B09G3HRP7Y?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-    </div>
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71xkLShQhPL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
-        <h2>Bluetooth Speaker</h2>
-        <p>Portable speaker with crystal-clear sound and deep bass.</p>
-        <a class="btn" href="https://www.amazon.com/dp/B07W7QX6XY?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-    </div>
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/61OHplw85eL._AC_SL1500_.jpg" alt="Wireless Headphones">
-        <h2>Wireless Headphones</h2>
-        <p>Noise cancelling with 70H playtime and deep bass.</p>
-        <a class="btn" href="https://a.co/d/b4quq4I?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-    </div>
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71h6PpGaz9L._AC_SL1500_.jpg" alt="Laptop Cooling Pad">
-        <h2>Laptop Cooling Pad</h2>
-        <p>Ultra slim, quiet cooler with USB ports.</p>
-        <a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
 </section>
 
