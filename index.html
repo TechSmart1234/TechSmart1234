@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,21 +43,21 @@ header h1 { margin-left: 10px; font-size: 1.5rem; }
 .btn { background: #FF4136; color: #fff; padding: 0.7rem 1.5rem; text-decoration: none; display: inline-block; border-radius: 3px; font-size: 1rem; }
 .bold-image-section { text-align: center; margin: 2rem 0; }
 .bold-image-section img {
-    width: 70%; /* Reduced width */
-    max-width: 700px;
-    height: auto;
+    width: 99%;
+    max-width: 1000px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     display: block;
     margin: 20px auto;
 }
-.highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.8rem; color: #0074D9; font-weight: bold; margin-top: 1rem; }
+.highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.2rem; color: #0074D9; font-weight: bold; margin-top: 1rem; }
 .gadget-intro { text-align: center; padding: 1rem; }
-.gadget-intro h2 { font-size: 1.5rem; color: #333; }
+.gadget-intro h2 { font-size: 1.2rem; color: #333; }
 .gadget-images { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 1rem; }
 .gadget-images img { max-width: 150px; height: auto; }
 footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-
 @media (max-width: 600px) {
     header { flex-direction: column; align-items: flex-start; }
     header img { margin-left: 0; }
@@ -69,14 +68,12 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 </style>
 </head>
 <body>
-
 <header>
     <span class="hamburger" onclick="openNav()">&#9776;</span>
     <img src="logo.png" alt="TechSmart Logo">
     <h1>TechSmart</h1>
     <input type="text" class="search-bar" placeholder="Search...">
 </header>
-
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">Home</a>
@@ -87,12 +84,10 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
     <a href="#">Best Deals</a>
     <a href="#">About Us</a>
 </div>
-
 <section class="hero">
     <h1 style="font-size: 2rem; font-weight: bold; text-shadow: 2px 2px 5px rgba(0,0,0,0.7);">Explore Top Tech Gadgets for 2025</h1>
     <p style="font-size: 1.2rem; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">Tested, Reviewed, and Recommended for You</p>
 </section>
-
 <section class="gadget-intro">
     <h2>Discover Sophisticated Tech Gadgets That Are Redefining Everyday Life</h2>
     <div class="gadget-images">
@@ -102,7 +97,6 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
         <img src="security.robot.jpg" alt="Security Robot">
     </div>
 </section>
-
 <div class="container">
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61X7RMZzqgL._AC_SL1500_.jpg" alt="Smart Watch">
@@ -129,16 +123,13 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
         <a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
     </div>
 </div>
-
 <div class="bold-image-section">
     <img src="laptop-user.jpg" alt="Woman Using Laptop">
     <h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
 </div>
-
 <footer>
     <p>&copy; 2025 TechSmart. All Rights Reserved.</p>
 </footer>
-
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "70%";
@@ -147,6 +138,5 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 </script>
-
 </body>
 </html>
