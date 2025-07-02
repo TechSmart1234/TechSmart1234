@@ -66,8 +66,6 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
-  width: 800pix; 
-  height: 900pix; 
   padding: 95px 100px;
   background-image: url('upgrade-tech.jpg');
   background-size: 650px 600px;
@@ -81,6 +79,41 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 @keyframes zoomBG {
   from { background-size: 1000px 1600px; }
   to { background-size: 1300px 1600px; }
+}
+
+/* Horizontal Scrollable Tips Section */
+.tip-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.tip-card {
+  min-width: 260px;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+  position: relative;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tip-card h3 {
+  color: #fff;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.5);
+  padding: 8px 12px;
+  border-radius: 5px;
+  max-width: 85%;
 }
 </style>
 </head>
@@ -145,62 +178,33 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 <img src="self-cleaning-waterbottle.jpg" alt="Self-Cleaning Smart Water Bottle">
 <h2>Self-Cleaning Smart Water Bottle</h2>
 <p>Keeps your water fresh with UV purification technology.</p>
-<a class="btn" href="https://www.amazon.com/dp/B08JVJ2GGT?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+<a class="btn" href="#">View on Amazon</a>
 </div>
-<div class="product-card">
-<img src="handheld-thermal-camera.jpg" alt="Handheld Portable Thermal Camera">
-<h2>Handheld Portable Thermal Camera</h2>
-<p>See heat signatures for safety, maintenance, and adventure.</p>
-<a class="btn" href="https://www.amazon.com/dp/B0CCYDT1NR?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-</div>
-<div class="product-card">
-<img src="wireless-headphones.jpg" alt="Wireless Headphones">
-<h2>Wireless Headphones</h2>
-<p>Noise cancelling with 70H playtime and deep bass.</p>
-<a class="btn" href="https://www.amazon.com/dp/B0DLKB5V35?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-</div>
-<div class="product-card">
-<img src="laptop-cooling-pad.jpg" alt="Laptop Cooling Pad">
-<h2>Laptop Cooling Pad</h2>
-<p>Ultra slim, quiet cooler with USB ports.</p>
-<a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
-</div>
-</div>
-</section>
-
-<section class="customer-reviews">
-<h2>Customer Reviews</h2>
-<div class="review-card">
-<p>"Absolutely love my new wireless headphones. Sound quality is incredible!"</p>
-<div class="review-stars">★ ★ ★ ★ ★</div>
-</div>
-<div class="review-card">
-<p>"The thermal camera is a game-changer for my maintenance work."</p>
-<div class="review-stars">★ ★ ★ ★ ★</div>
-</div>
-<div class="review-card">
-<p>"Highly recommend the cooling pad — keeps my laptop from overheating!"</p>
-<div class="review-stars">★ ★ ★ ★ ☆</div>
-</div>
-<div class="review-card">
-<p>"Smart water bottle is sleek and keeps my water super fresh."</p>
-<div class="review-stars">★ ★ ★ ★ ★</div>
+<!-- Add other products as needed -->
 </div>
 </section>
 
 <div class="bold-image-section">
-<img src="laptop-user.jpg" alt="Woman Using Laptop">
+<img src="laptop-user.jpg" alt="Laptop">
 <h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
 </div>
 
 <section class="info-section">
 <h2><span class="upgrade-heading">Why Upgrade Your Tech?</span></h2>
-<ul style="list-style: none; padding-left: 0; font-size: 0.7rem;">
-<li>✔️ Boost productivity for work or study</li>
-<li>✔️ Enjoy immersive entertainment experiences</li>
-<li>✔️ Stay connected with cutting-edge gadgets</li>
-<li>✔️ Smart tools to simplify everyday tasks</li>
-</ul>
+<div class="tip-slider">
+  <div class="tip-card" style="background-image: url('boost-productivity.jpg');">
+    <h3>✔️ Boost productivity for work or study</h3>
+  </div>
+  <div class="tip-card" style="background-image: url('enjoy-entertainment.jpg');">
+    <h3>✔️ Enjoy immersive entertainment experiences</h3>
+  </div>
+  <div class="tip-card" style="background-image: url('stay-connected.jpg');">
+    <h3>✔️ Stay connected with cutting-edge gadgets</h3>
+  </div>
+  <div class="tip-card" style="background-image: url('smart-tools.jpg');">
+    <h3>✔️ Smart tools to simplify everyday tasks</h3>
+  </div>
+</div>
 </section>
 
 <footer>
