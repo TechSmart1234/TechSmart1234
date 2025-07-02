@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,23 +59,26 @@ header h1 { font-size: 1.3rem; margin: 0 0 0 5px; }
 .highlight-text { font-family: 'Arial Black', sans-serif; font-size: 1.2rem; color: #0074D9; font-weight: bold; margin-top: 1rem; }
 .info-section { background: #fff; padding: 2rem 1rem; text-align: center; }
 footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+
+/* New Zoom Background Effect for Heading */
 .upgrade-heading {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px 25px;
   background-image: url('upgrade-tech.jpg');
-  background-size: 150px 100px;
+  background-size: 200px 150px;
   background-repeat: no-repeat;
   background-position: center;
-  animation: moveBG 15s linear infinite;
+  animation: zoomBG 10s ease-in-out infinite alternate;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-@keyframes moveBG {
-  from { background-position: 0 0; }
-  to { background-position: 100% 0; }
+
+@keyframes zoomBG {
+  from { background-size: 200px 150px; }
+  to { background-size: 250px 200px; }
 }
 </style>
 </head>
@@ -93,6 +97,7 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 </div>
 </div>
 </header>
+
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <a href="#">Home</a>
@@ -102,6 +107,7 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 <a href="#">Deals</a>
 <a href="#">About</a>
 </div>
+
 <section class="hero">
 <h1>Explore the Smartest Tech for 2025</h1>
 <p>Unbeatable Deals & Expert Reviews</p>
@@ -110,6 +116,7 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 <a href="#" class="btn">Tech Quiz</a>
 </div>
 </section>
+
 <section class="categories">
 <div class="category-card">
 <img src="smart-glasses.jpg" alt="Smart Glasses">
@@ -128,6 +135,7 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 <h3>Security Tech</h3>
 </div>
 </section>
+
 <section class="featured-products">
 <h2>Featured Products</h2>
 <div class="product-grid">
@@ -157,6 +165,7 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 </div>
 </div>
 </section>
+
 <section class="customer-reviews">
 <h2>Customer Reviews</h2>
 <div class="review-card">
@@ -176,10 +185,12 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 <div class="review-stars">★ ★ ★ ★ ★</div>
 </div>
 </section>
+
 <div class="bold-image-section">
 <img src="laptop-user.jpg" alt="Woman Using Laptop">
 <h2 class="highlight-text">Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
 </div>
+
 <section class="info-section">
 <h2><span class="upgrade-heading">Why Upgrade Your Tech?</span></h2>
 <ul style="list-style: none; padding-left: 0; font-size: 0.9rem;">
@@ -189,9 +200,11 @@ footer { background: #333; color: #fff; text-align: center; padding: 1rem; margi
 <li>✔️ Smart tools to simplify everyday tasks</li>
 </ul>
 </section>
+
 <footer>
 <p>&copy; 2025 TechSmart. All rights reserved.</p>
 </footer>
+
 <script>
 function openNav() {
 document.getElementById("mySidenav").style.width = "70%";
