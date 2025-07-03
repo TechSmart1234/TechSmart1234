@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,24 +48,41 @@ header h1 { font-size: 1.3rem; margin: 0; }
 .product-card p { font-size: 0.8rem; }
 .product-card .btn { background: #FF4136; color: #fff; padding: 0.3rem 0.7rem; border-radius: 3px; margin-top: 0.4rem; display: inline-block; }
 .star-rating { color: gold; margin: 0.5rem 0; font-size: 1rem; }
+.price-table { max-width: 600px; margin: 2rem auto; border-collapse: collapse; width: 90%; }
+.price-table th, .price-table td { border: 1px solid #ccc; padding: 0.8rem; text-align: center; background: #fff; }
+.price-table th { background: #0074D9; color: #fff; }
 .customer-reviews { max-width: 900px; margin: 2rem auto; padding: 1rem; }
 .review-card { background: #fff; padding: 1rem; margin: 0.8rem 0; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
 .review-stars { color: gold; font-size: 1rem; }
-.price-comparison { max-width: 900px; margin: 2rem auto; padding: 1rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.price-comparison table { width: 100%; border-collapse: collapse; }
-.price-comparison th, .price-comparison td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-.price-comparison th { background: #0074D9; color: #fff; }
 .bold-image-section { text-align: center; margin: 2rem 0; }
+.bold-image-section img { max-width: 100%; height: auto; border-radius: 8px; }
 .info-section { background: #fff; padding: 2rem 1rem; text-align: center; }
-.upgrade-heading { display: inline-block; font-size: 2rem; font-weight: bold; color: #fff; padding: 60px 100px; background-image: url('upgrade-tech.jpg'); background-size: 650px 600px; background-repeat: no-repeat; background-position: center; animation: zoomBG 10s ease-in-out infinite alternate; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+.upgrade-heading {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 60px 100px;
+  background-image: url('upgrade-tech.jpg');
+  background-size: 650px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: zoomBG 10s ease-in-out infinite alternate;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
 .tip-scroll-container { display: flex; overflow-x: auto; gap: 1rem; padding: 1rem 0; }
 .tip-card { flex: 0 0 auto; width: 250px; height: 180px; border-radius: 8px; background-size: cover; background-position: center; color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-@keyframes zoomBG { from { background-size: 1000px 1600px; } to { background-size: 1300px 1600px; } }
+@keyframes zoomBG {
+  from { background-size: 1000px 1600px; }
+  to { background-size: 1300px 1600px; }
+}
 footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-footer a { color: #fff; margin: 0 8px; text-decoration: underline; }
+footer a { color: #fff; margin: 0 10px; text-decoration: underline; font-size: 0.9rem; }
 </style>
 </head>
 <body>
+
 <header>
 <div class="logo-section">
 <span class="hamburger" onclick="openNav()">&#9776;</span>
@@ -76,6 +94,7 @@ footer a { color: #fff; margin: 0 8px; text-decoration: underline; }
 <div class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cart-count">0</span></div>
 </div>
 </header>
+
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <a href="#">Home</a>
@@ -85,6 +104,7 @@ footer a { color: #fff; margin: 0 8px; text-decoration: underline; }
 <a href="#">Deals</a>
 <a href="#">About</a>
 </div>
+
 <section class="hero">
 <h1>Explore the Smartest Tech for 2025</h1>
 <p>Unbeatable Deals & Expert Reviews</p>
@@ -93,46 +113,58 @@ footer a { color: #fff; margin: 0 8px; text-decoration: underline; }
 <a href="#" class="btn">Tech Quiz</a>
 </div>
 </section>
+
 <section class="categories">
 <div class="category-card"><img src="smart-glasses.jpg" alt="Smart Glasses"><h3>Smart Glasses</h3></div>
 <div class="category-card"><img src="wireless-charging.dex.jpg" alt="Wireless Charging"><h3>Wireless Charging</h3></div>
 <div class="category-card"><img src="earbud-translator.jpg" alt="Smart Earbuds"><h3>Smart Earbuds</h3></div>
 <div class="category-card"><img src="security.robot.jpg" alt="Home Security"><h3>Security Tech</h3></div>
 </section>
+
 <section class="featured-products">
 <h2>Featured Products</h2>
 <div class="product-grid">
-<div class="product-card"><img src="self-cleaning-waterbottle.jpg" alt="Smart Water Bottle"><h2>Self-Cleaning Smart Water Bottle</h2><p>Keeps your water fresh with UV purification technology.</p><div class="star-rating">★★★★★</div><a class="btn" href="https://www.amazon.com/dp/B08JVJ2GGT?tag=techsmartstore16-20" target="_blank">View on Amazon</a></div>
-<div class="product-card"><img src="handheld-thermal-camera.jpg" alt="Thermal Camera"><h2>Handheld Portable Thermal Camera</h2><p>See heat signatures for safety, maintenance, and adventure.</p><div class="star-rating">★★★★☆</div><a class="btn" href="https://www.amazon.com/dp/B0CCYDT1NR?tag=techsmartstore16-20" target="_blank">View on Amazon</a></div>
-<div class="product-card"><img src="wireless-headphones.jpg" alt="Wireless Headphones"><h2>Wireless Headphones</h2><p>Noise cancelling with 70H playtime and deep bass.</p><div class="star-rating">★★★★★</div><a class="btn" href="https://www.amazon.com/dp/B0DLKB5V35?tag=techsmartstore16-20" target="_blank">View on Amazon</a></div>
-<div class="product-card"><img src="laptop-cooling-pad.jpg" alt="Laptop Cooling Pad"><h2>Laptop Cooling Pad</h2><p>Ultra slim, quiet cooler with USB ports.</p><div class="star-rating">★★★★☆</div><a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a></div>
+<div class="product-card">
+<img src="self-cleaning-waterbottle.jpg" alt="Smart Water Bottle">
+<h2>Self-Cleaning Smart Water Bottle</h2>
+<p>Keeps your water fresh with UV purification technology.</p>
+<div class="star-rating">★★★★★</div>
+<a class="btn" href="https://www.amazon.com/dp/B08JVJ2GGT?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+</div>
+
+<div class="product-card">
+<img src="handheld-thermal-camera.jpg" alt="Thermal Camera">
+<h2>Handheld Portable Thermal Camera</h2>
+<p>See heat signatures for safety, maintenance, and adventure.</p>
+<div class="star-rating">★★★★☆</div>
+<a class="btn" href="https://www.amazon.com/dp/B0CCYDT1NR?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+</div>
+
+<div class="product-card">
+<img src="wireless-headphones.jpg" alt="Wireless Headphones">
+<h2>Wireless Headphones</h2>
+<p>Noise cancelling with 70H playtime and deep bass.</p>
+<div class="star-rating">★★★★★</div>
+<a class="btn" href="https://www.amazon.com/dp/B0DLKB5V35?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+</div>
+
+<div class="product-card">
+<img src="laptop-cooling-pad.jpg" alt="Laptop Cooling Pad">
+<h2>Laptop Cooling Pad</h2>
+<p>Ultra slim, quiet cooler with USB ports.</p>
+<div class="star-rating">★★★★☆</div>
+<a class="btn" href="https://www.amazon.com/dp/B00NNMB3KS?tag=techsmartstore16-20" target="_blank">View on Amazon</a>
+</div>
 </div>
 </section>
+
 <section class="customer-reviews">
 <h2>Customer Reviews</h2>
 <div class="review-card"><p>"Absolutely love my new wireless headphones. Sound quality is incredible!"</p><div class="review-stars">★★★★★</div></div>
 <div class="review-card"><p>"The thermal camera is a game-changer for my maintenance work."</p><div class="review-stars">★★★★★</div></div>
 <div class="review-card"><p>"Highly recommend the cooling pad — keeps my laptop from overheating!"</p><div class="review-stars">★★★★☆</div></div>
-<div class="review-card"><p>"Smart water bottle is sleek and keeps my water super fresh."</p><div class="review-stars">★★★★★</div></div>
 </section>
-<section class="price-comparison">
-<h2>Price Comparison</h2>
-<table>
-<thead>
-<tr><th>Product</th><th>Amazon</th><th>Other Stores</th></tr>
-</thead>
-<tbody>
-<tr><td>Wireless Headphones</td><td>$89</td><td>$110</td></tr>
-<tr><td>Thermal Camera</td><td>$150</td><td>$180</td></tr>
-<tr><td>Smart Water Bottle</td><td>$40</td><td>$55</td></tr>
-<tr><td>Laptop Cooling Pad</td><td>$30</td><td>$45</td></tr>
-</tbody>
-</table>
-</section>
-<div class="bold-image-section">
-<img src="laptop-user.jpg" alt="Woman Using Laptop">
-<h2>Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
-</div>
+
 <section class="info-section">
 <h2><span class="upgrade-heading">Why Upgrade Your Tech?</span></h2>
 <div class="tip-scroll-container">
@@ -142,14 +174,22 @@ footer a { color: #fff; margin: 0 8px; text-decoration: underline; }
 <div class="tip-card" style="background-image: url('smart-tools.jpg');">✔️ Smart tools to simplify everyday tasks</div>
 </div>
 </section>
+
+<div class="bold-image-section">
+<img src="laptop-user.jpg" alt="Woman Using Laptop">
+<h2>Experience seamless performance with the latest tech for work, school, or entertainment.</h2>
+</div>
+
 <footer>
 <p>&copy; 2025 TechSmart. All rights reserved.</p>
-<a href="privacy-policy.html" target="_blank">Privacy Policy</a> |
-<a href="terms.html" target="_blank">Terms & Conditions</a>
+<a href="privacy-policy.html">Privacy Policy</a> | 
+<a href="terms.html">Terms & Conditions</a>
 </footer>
+
 <script>
 function openNav() { document.getElementById("mySidenav").style.width = "70%"; }
 function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
 </script>
+
 </body>
 </html>
